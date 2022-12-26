@@ -1,15 +1,15 @@
 import 'package:flutter/foundation.dart';
 
-
 // Mix-in [DiagnosticableTreeMixin] to have access to
 // [debugFillProperties] for the devtool ignore: prefer_mixin
 
-class Counter with ChangeNotifier, DiagnosticableTreeMixin {
+class MainState with ChangeNotifier, DiagnosticableTreeMixin {
   int _count = 0;
 
-  int get count => _count;
+  int get currentCount => _count;
+  // Add the rest of your state properties here.
 
-  void increment() {
+  void incrementCounter() {
     _count++;
     notifyListeners();
   }
@@ -19,6 +19,6 @@ class Counter with ChangeNotifier, DiagnosticableTreeMixin {
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(IntProperty('count', count));
+    properties.add(IntProperty('count', currentCount));
   }
 }
