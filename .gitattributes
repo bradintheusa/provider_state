@@ -1,0 +1,5 @@
+*.dart linguist-detectable=true
+windows/* linguist-vendored
+macso/* linguist-vendored
+android/* linguist-vendored
+linux/* linguist-vendored
